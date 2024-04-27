@@ -1,0 +1,32 @@
+.firstHeading {
+  font-family: "Mukta";
+  font-size: 15.69px;
+  font-weight: 700;
+}
+.secondHeading {
+  font-family: "Mukta";
+  font-size: 12.75px;
+  font-weight: 600;
+
+  color: blue;
+}
+.taskDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.timeValue {
+  font-family: "Mukta";
+  font-size: 12.75px;
+  font-weight: 400;
+  color: #828282;
+}
+
+
+.verticalLine{
+  margin-top: 0;
+  background-color: #E0E0E0;
+  width: 2px;
+  height: 100%;
+
+}

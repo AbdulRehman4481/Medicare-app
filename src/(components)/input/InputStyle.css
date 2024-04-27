@@ -1,0 +1,31 @@
+input {
+  width: 452px;
+  height: 30px;
+  display: block;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #828282;
+  outline: none;
+  font-family: "Mukta";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 37px;
+  letter-spacing: 0.0015em;
+  margin-bottom: 22px;
+}
+input::placeholder {
+  font-size: 20px;
+  color: black;
+  color: #4F4F4F;
+}
+label {
+  font-family: "Mukta";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.001em;
+  text-align: left;
+  color: #4F4F4F;
+
+}

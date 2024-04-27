@@ -73,7 +73,7 @@
   }
 }
 
-* {
+ * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -85,15 +85,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 a {
   color: inherit;
@@ -105,3 +96,22 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 245px;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  border: 1px solid #e0e0e0;
+  margin-top: 94px;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 1px 16px;
+  margin-top: 94px;
+} 

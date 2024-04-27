@@ -1,0 +1,115 @@
+.finishBtn {
+  background-color: #0000ac;
+  width: 456px;
+  height: 57px;
+  padding: 15px 41px 15px 41px;
+  border-radius: 10.000001907348633px;
+  color: white;
+  font-family: "Mukta";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.0125em;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.googleBtn {
+  background-color: #0000ac;
+  width: 456px;
+  height: 57px;
+  padding: 15px 41px 15px 41px;
+  border-radius: 10.000001907348633px;
+  color: white;
+  font-family: "Mukta";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.0125em;
+  border: none;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.signInDiv {
+  display: flex;
+  height: 100vh;
+}
+.mainHeading {
+  font-family: "Mukta";
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 63px;
+  letter-spacing: 0.0025em;
+}
+.para {
+  font-family: "Mukta";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 37px;
+  letter-spacing: 0.0015em;
+  text-align: left;
+  margin-bottom: 32px;
+}
+.secondHeading {
+  font-family: "Mukta";
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  margin-bottom: 22px;
+}
+.para2 {
+  font-family: "Mukta";
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  margin-top: 66px;
+  margin-bottom: 81px;
+}
+.learnBtn {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  padding: 17px 15px 17px 15px;
+  border-radius: 5.000000953674316px;
+  background: #ffffff;
+  color: #0000ac;
+  border: 1px solid white;
+}
+
+.secondDiv {
+  background-color: #0000ac;
+  height: 100%;
+  width: 925px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fromDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 46px;
+
+  width: 569px;
+}
+.signUpLink {
+  font-family: "Mukta";
+  font-size: 16px;
+  font-weight: 500;
+}
+.linkDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

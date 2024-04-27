@@ -1,0 +1,104 @@
+.patientDiv {
+  background-color: #f9f9f9;
+  padding: 15px 23px;
+}
+.patientHeading {
+  font-family: "Mukta";
+  font-size: 18px;
+  font-weight: 400;
+}
+.totalPatients {
+  font-family: Mukta;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.iconDiv {
+  border: 1px solid #e0e0e0;
+  width: fit-content;
+  padding: 8px;
+  margin-right: 10px;
+}
+.iconsDiv {
+  display: flex;
+}
+.secondDiv {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 28px;
+  background-color: #ffff;
+}
+.optionsTh {
+  padding-right: 0px;
+}
+th {
+  font-family: "Mukta";
+  font-size: 18px;
+  font-weight: 400;
+  width: 206px;
+  text-align: center;
+}
+.tableDiv {
+  background-color: #ffff;
+  padding: 18px 25px;
+  height: 691.34px;
+  overflow: scroll;
+}
+table .name1 {
+  font-family: Mukta;
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 0px;
+  text-align: start;
+}
+table .name {
+  font-family: Mukta;
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 0px;
+}
+.status {
+  color: #27ae60;
+  width: 140.23px !important;
+  height: 25px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.statusTd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+table {
+  text-align: center;
+}
+th:first-child {
+  text-align: start;
+}
+.threeDot {
+  width: 35px;
+}
+table tbody tr {
+  height: 72px;
+}
+.pagination span {
+  margin: 5px 10px 0px 10px;
+  font-size: 18px;
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 20px 60px;
+}
+.pagination button {
+  border: none;
+  background-color: white;
+  font-family: "Mukta";
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}

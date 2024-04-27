@@ -1,0 +1,89 @@
+.timeValue {
+  font-family: "Mukta";
+  color: black;
+  font-size: 10.79px;
+  font-weight: "700";
+  margin: 0 21px 0px 10px;
+}
+.patientName {
+  font-family: "Mukta";
+  font-size: 10.79px;
+  font-weight: "400";
+}
+.dorpDownIcon {
+  border: 1px solid #e0e0e0;
+  border-radius: 4.9px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dorpDown {
+  transform: rotate(180deg);
+}
+.dropDownDiv {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 7px;
+}
+.dropDownDiv span {
+  font-family: "Mukta";
+  font-size: 10.79px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+
+.dropIcon {
+  display: flex;
+  flex-direction: row;
+}
+.dropIcon div {
+  border: 1px solid #e0e0e0;
+  margin-left: 9px;
+  width: 17px;
+  height: 17px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.labels {
+  margin-left: 10px;
+}
+.ans {
+  margin-left: 10px;
+}
+.apData {
+  display: flex;
+  flex-direction: row;
+}
+.labelsDiv {
+  display: flex;
+  flex-direction: column;
+}
+.ansDiv {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.beginBtn {
+  background-color: #0000ac;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+padding: 10px 10px;
+}
+.dropMain{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+
+}
+.dropIcon button{
+  border: none;
+  background-color: transparent;
+}
