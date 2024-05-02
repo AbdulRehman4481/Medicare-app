@@ -68,3 +68,19 @@ export const DELETE = async (req: NextRequest) => {
     });
   }
 };
+
+export const PUT = async (request: NextRequest) => {
+  try {
+    const { id, ...data } = await request.json();
+    const newPatient = await prisma.patients.update({
+      where: { id },
+      data,
+    });
+    return new NextResponse(JSON.stringify({ data: newPatient, success: true }), {
+      status: 200,
+    });
+  } catch (error) {
+    console.error("Error updating user:", error);
+    return new NextResponse(JSON.stringify(error), { status: 400 });
+  }
+};

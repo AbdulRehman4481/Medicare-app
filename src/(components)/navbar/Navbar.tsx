@@ -3,11 +3,10 @@ import React from "react";
 import "./NavbarStyle.css";
 import Image from "next/image";
 import Images from "@/constant/Image";
+import dayjs from "dayjs";
 import { signOut } from "next-auth/react";
 export default function Navbar() {
-  const todayDate = new Date().getDate();
-  const todayMonth = new Date().getMonth();
-  const todayYear = new Date().getFullYear();
+  const todayDate = new Date()
 
   return (
     <nav className="nav">
@@ -54,34 +53,34 @@ export default function Navbar() {
           </div>
           <div id="liDiv">
             <div id="dateDiv">
-              <p id="date">{`${todayDate}/${todayMonth}/${todayYear}`}</p>
+              <p id="date">{dayjs(todayDate).format("DD,MMMM YYYY")}</p>
             </div>
           </div>
           <div id="liDiv">
             <div id="navIcons">
               <Image
                 src={Images.emailIcon}
-                width={20.63}
-                height={18.63}
+                width={24.52}
+                height={19.63}
                 id="notifyIcon"
                 alt="searchIcon"
               />
               <Image
                 src={Images.notifyIcon}
-                width={18.63}
-                height={18.63}
+                width={22.63}
+                height={24.63}
                 id="notifyIcon"
                 alt="searchIcon"
               />
-              <div onClick={() => signOut()}>
+              <span onClick={() => signOut()}>
                 <Image
                   src={Images.logOutIcon}
-                  width={18.63}
-                  height={18.63}
+                  width={25.63}
+                  height={25.63}
                   id="notifyIcon"
                   alt="searchIcon"
                 />
-              </div>
+              </span>
             </div>
           </div>
         </div>

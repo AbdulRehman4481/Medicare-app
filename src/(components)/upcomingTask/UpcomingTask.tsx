@@ -33,16 +33,16 @@ export default function UpcomingTask() {
             <span className="firstHeading">Upcoming schedule</span>
           </div>
           <div>
-            <span className="secondHeading">New appointment</span>
+            <span className="secondHeading">New Appointment</span>
             <div
-              className="pluseIcon"
+              className="appointmentAdd"
               style={{ display: "inline" }}
               onClick={openModal}
             >
               <Image
                 src={Images.pluseIcon}
-                width={9.32}
-                height={9.32}
+                width={15.32}
+                height={15.32}
                 alt="pluseIcon"
               />
             </div>
@@ -59,7 +59,7 @@ export default function UpcomingTask() {
               key={index}
             >
               <div style={{ width: 50 }}>
-                <span className="timeValue">{value}</span>
+                <h1 className="time">{value}</h1>
               </div>
               <div
                 style={{
@@ -71,9 +71,9 @@ export default function UpcomingTask() {
               >
                 <Image
                   src={Images.blackDot}
-                  width={10}
-                  height={10}
-                  alt="cnmmxc"
+                  width={15}
+                  height={15}
+                  alt="blackDot"
                 />
                 <div className="verticalLine"></div>
               </div>

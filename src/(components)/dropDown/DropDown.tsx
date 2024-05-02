@@ -9,8 +9,15 @@ import { fetchPatient } from "@/store/reducer/patientFetchReducer";
 import { showToast } from "../toast/Toast";
 import usePatients from "@/hooks/usePatients";
 
-export default function DropDown({ id,setShow }: { id: string,setShow:any }) {
-
+export default function DropDown({
+  id,
+  setShow,
+  editPatientData,
+}: {
+  id: string;
+  editPatientData: any;
+  setShow: any;
+}) {
   const [visible, setVisible] = useState(false);
   const patientsData: PatientDataType[] = useAppSelector(
     (state: RootState) => state.patient.patientData
@@ -46,10 +53,9 @@ export default function DropDown({ id,setShow }: { id: string,setShow:any }) {
     }
   };
   const handleEdit = () => {
-    setShow(true)
-    
+    setShow(true);
+    editPatientData(id);
   };
-
   return (
     <div className="dropdown-container">
       <div className="dropdown-toggle" onClick={toggleDropDown}>

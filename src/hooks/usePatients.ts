@@ -19,11 +19,11 @@ export default function usePatients() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const patientsPerPage = 10;
-  const totalPages = Math.ceil(patientsData.length / patientsPerPage);
+  const totalPages = Math.ceil(patientsData?.length / patientsPerPage);
 
   const indexOfLastPatient = currentPage * patientsPerPage;
   const indexOfFirstPatient = indexOfLastPatient - patientsPerPage;
-  const currentPatients = patientsData.slice(
+  const currentPatients = patientsData?.slice(
     indexOfFirstPatient,
     indexOfLastPatient
   );

@@ -55,7 +55,7 @@ export default function Home() {
                   {falseAppointmentsPercentage}%
                 </h1>
               </div>
-              <OfflineChart />
+              {/* <OfflineChart /> */}
             </div>
           </div>
           <div className="online">
@@ -83,7 +83,7 @@ export default function Home() {
                 </h1>
               </div>
 
-              <OnlineChart />
+              {/* <OnlineChart /> */}
             </div>
           </div>
           <div className="total">
@@ -98,12 +98,12 @@ export default function Home() {
             </div>
             <div className="chartDiv">
               <h1 className="amount">{patientsData?.length}</h1>
-              <TotalChart />{" "}
+              {/* <TotalChart />{" "} */}
             </div>
           </div>
         </div>
         <div className="workDiv">
-          <div className="tasks">
+          {/* <div className="tasks">
             <div className="tasksDiv">
               <h1 className="taskHeading">Tasks</h1>
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -222,7 +222,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="upcoming">
             <UpcomingTask />
           </div>

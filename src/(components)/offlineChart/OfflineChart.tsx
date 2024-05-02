@@ -27,10 +27,10 @@ const OfflineChart: React.FC<{}> = () => {
 
   
 
-  const filteredAppointments = appointmentData.filter(
+  const filteredAppointments = appointmentData?.filter(
     (appointment) => appointment.consultation === "No"
   );
-  const chartDataMap = filteredAppointments.reduce((acc, appointment) => {
+  const chartDataMap = filteredAppointments?.reduce((acc, appointment) => {
     const date = new Date(appointment.dateTime);
     const timestamp = date.getTime();
     acc.set(timestamp, (acc.get(timestamp) || 0) + 1);

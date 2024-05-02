@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import "./PatientsStyle.css";
 import Image from "next/image";
 import Images from "@//constant/Image";
@@ -13,7 +13,6 @@ import DropDown from "@/(components)/dropDown/DropDown";
 
 export default function Patients() {
   const {
-    setCurrentPage,
     totalPages,
     currentPage,
     setShowAddPatient,
@@ -25,21 +24,27 @@ export default function Patients() {
     toggleAddPatient,
     currentPatients,
   } = usePatients();
+  const [editPatient, setEditPatient] = useState(null);
+
+  const handleEditPatient = (id:any) => {
+    const patientToEdit = patientsData.find((patient) => patient.id === id);
+    setEditPatient(patientToEdit as any);
+  };
+
+
   return (
     <div className="patientDiv">
       <div>
         <h1 className="patientHeading">Patient register</h1>
       </div>
       {showAddPatient ? (
-        <AddPatient 
-        showPatient={setShowAddPatient}
-         />
+        <AddPatient  showPatient={setShowAddPatient} editPatientData={editPatient} />
       ) : (
         <>
           <div className="secondDiv">
             <div>
               <h1 className="totalPatients">
-                Total Patients ({patientsData.length})
+                Total Patients ({patientsData?.length})
               </h1>
             </div>
             <div className="iconsDiv">
@@ -99,8 +104,8 @@ export default function Patients() {
                       <div
                         className="status"
                         style={{
-                          backgroundColor: getStatusColor(patient.status),
-                          color: getStatusTextColor(patient.status),
+                          backgroundColor: getStatusColor(patient?.status),
+                          color: getStatusTextColor(patient?.status),
                         }}
                         id="status"
                       >
@@ -110,7 +115,7 @@ export default function Patients() {
                     <td>22/22/22</td>
                     <td>23/23/23</td>
                     <td className="threeDot">
-                      <DropDown id={patient.id} setShow={setShowAddPatient} />
+                      <DropDown id={patient?.id} setShow={setShowAddPatient} editPatientData={handleEditPatient} />
                     </td>
                   </tr>
                 ))}

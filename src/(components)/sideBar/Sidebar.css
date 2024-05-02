@@ -1,5 +1,13 @@
+.sidebar {
+  width: 245px;
+}
+.menu {
+  font-family: "Mukta";
+  font-weight: 400;
+  font-size: 12.75px;
+}
 .linkDiv.active {
-  color: #0000ac; /* Active link color */
+  color: #0000ac;
 }
 .linkDiv {
   font-family: "Mukta";
@@ -13,11 +21,14 @@
   padding: 10px 0px 10px 0px;
   cursor: pointer;
 }
+.linkDiv span{
+  margin-left: 10px;
 
+}
 .sidebar h1 {
   font-family: "Mukta";
   font-weight: 400;
-  font-size: 12.45px;
+  font-size: 15.45px;
   color: #828282;
   margin: 30px 0px 0px 21px;
 }
@@ -32,8 +43,7 @@
   overflow: hidden;
 }
 
-
-.sidebarDiv::before{
+.sidebarDiv::before {
   content: "";
   position: absolute;
   left: 0;
@@ -43,10 +53,10 @@
   z-index: -1;
   transition: 0.8s;
 }
-.sidebarDiv:hover::before{
+.sidebarDiv:hover::before {
   height: 100%;
 }
-.sidebarDiv::before{
+.sidebarDiv::before {
   top: 0;
   border-radius: 0 25px 25px 0;
 }
@@ -54,5 +64,6 @@
 .linkDiv img {
   margin-right: 10px;
 }
-
-
+.linkDiv:hover {
+  color: #0000ac;
+}

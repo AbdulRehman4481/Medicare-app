@@ -1,5 +1,4 @@
-// import { PatientDataType } from "@/app/(pages)/page";
-import { PatientDataType } from "@/hooks/useHome";
+import { PatientDataType } from "@/constant/Types";
 import { fetchPatient } from "@/store/reducer/patientFetchReducer";
 import { RootState } from "@/store/store";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
@@ -23,14 +22,14 @@ const TotalChart: React.FC<Props> = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    const femalePatientsData: PatientDataType[] = patientsData.filter(
+    const femalePatientsData: PatientDataType[] = patientsData?.filter(
       (patient) => patient.gender === "Female"
     );
-    const malePatientsData: PatientDataType[] = patientsData.filter(
+    const malePatientsData: PatientDataType[] = patientsData?.filter(
       (patient) => patient.gender === "Male"
     );
-    setFemaleNumber(femalePatientsData.length);
-    setMaleNumber(malePatientsData.length);
+    setFemaleNumber(femalePatientsData?.length);
+    setMaleNumber(malePatientsData?.length);
   }, [patientsData]);
 
   const series = [femaleNumber, maleNumber];

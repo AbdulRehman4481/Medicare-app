@@ -1,24 +1,15 @@
 import Image from "next/image";
 import "./ForgatPasswordStyle.css";
-import Link from "next/link";
-import Input from "@/(components)/input/input";
 import Images from "@/constant/Image";
+
+import ForgatPasswordFrom from "@/(components)/forgatPasswordFrom/ForgatPasswordFrom";
 export default function ForgatPassword() {
   return (
     <>
       <div className="forgatDiv">
         <div className="fromDiv">
           <h1 className="mainHeading">Forgat Password</h1>
-          <form>
-            <label htmlFor="">Email</label>
-            <Input type="email" place="Email" />
-            <div className="linkDiv">
-              <Link href={"signUp"} className="signUpLink">
-                I Do't Have An Account <u>Sign Up</u>{" "}
-              </Link>
-            </div>
-            <button className="finishBtn">Submit</button>
-          </form>
+          <ForgatPasswordFrom />
         </div>
         <div className="secondDiv">
           <h1 className="secondHeading"> ALL IN ONE DASHBOARD</h1>

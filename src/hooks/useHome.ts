@@ -31,9 +31,9 @@ export default function useHome() {
   const filteredAppointments = appointmentData?.filter(
     (appointment) => appointment.consultation === "Yes"
   );
-  const totalAppointmentsCount = appointmentData.length;
-  const trueAppointmentsPercentage = ((filteredAppointments.length / totalAppointmentsCount) * 100).toFixed(0);
-  const falseAppointmentsPercentage = ((filteredAppointmentsNo.length / totalAppointmentsCount) * 100).toFixed(0);
+  const totalAppointmentsCount = appointmentData?.length;
+  const trueAppointmentsPercentage = ((filteredAppointments?.length / totalAppointmentsCount) * 100).toFixed(0);
+  const falseAppointmentsPercentage = ((filteredAppointmentsNo?.length / totalAppointmentsCount) * 100).toFixed(0);
 
   return { patientsData,falseAppointmentsPercentage,trueAppointmentsPercentage,appointmentData,filteredAppointmentsNo,filteredAppointments };
 }

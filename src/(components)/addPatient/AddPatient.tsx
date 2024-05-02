@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AddPatientsStyle.css";
 import Image from "next/image";
 import Images from "@/constant/Image";
@@ -14,15 +14,21 @@ const initialData = {
   status: "",
   dob: "",
 };
-export default function AddPatient({ showPatient }:any) {
+export default function AddPatient({ showPatient, editPatientData }: any) {
   const [patientData, setPatientData] = useState(initialData);
-
+  const [isUpdate, setIsUpdate] = useState(false);
   const handleChange = (e: Change) =>
     setPatientData((s) => ({ ...s, [e.target.name]: e.target.value }));
   const handleGenderSelect = (gender: string) => {
     setPatientData((prevData) => ({ ...prevData, gender }));
   };
-
+  useEffect(() => {
+    if (editPatientData) {
+      setPatientData(editPatientData);
+      setIsUpdate(true);
+    }
+  }, [editPatientData]);
+  console.log("patientData", patientData);
   const handleAddPatient = async (e: any) => {
     e.preventDefault();
     try {
@@ -46,8 +52,34 @@ export default function AddPatient({ showPatient }:any) {
       console.log("At handleAddPatient ", error);
     }
   };
+  const handleDate = (e: Change) => {
+    const { name, value } = e.target;
+    setPatientData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
   const handleCancel = () => {
-    showPatient(false); // Call the function passed through props to close AddPatient
+    setPatientData(initialData);
+    showPatient(false);
+  };
+
+  const handleUpdate = async () => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+      id: editPatientData.id,
+      ...patientData,
+    });
+
+    const requestOptions = {
+      method: "PUT",
+      headers: myHeaders,
+      body: raw,
+    };
+
+    await fetch("http://localhost:3000/api/patient", requestOptions);
+    setPatientData(initialData);
+    showToast("Patient successfully updated", "success");
   };
 
   return (
@@ -55,10 +87,18 @@ export default function AddPatient({ showPatient }:any) {
       <div className="secondAddDiv">
         <h1>Add Patient</h1>
         <div>
-          <button className="cancelBtn" onClick={handleCancel}>Cancel</button>
-          <button className="saveBtn" onClick={handleAddPatient}>
-            Save
+          <button className="cancelBtn" onClick={handleCancel}>
+            Cancel
           </button>
+          {isUpdate ? (
+            <button className="saveBtn" onClick={handleUpdate}>
+              Update
+            </button>
+          ) : (
+            <button className="saveBtn" onClick={handleAddPatient}>
+              Save
+            </button>
+          )}
         </div>
       </div>
       <div className="aboveForm">
@@ -113,8 +153,8 @@ export default function AddPatient({ showPatient }:any) {
                   <input
                     type="date"
                     className="calendarInput"
-                    // value={patientData.dob}
-                    // onChange={handleDate}
+                    value={patientData.dob}
+                    onChange={handleDate}
                   />
                 </div>
               </div>

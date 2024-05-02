@@ -1,32 +1,57 @@
-import React from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import moment from 'moment';
+import React, { useEffect } from "react";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import moment from "moment";
+import { useAppDispatch, useAppSelector } from "@/store/storeHook";
+import { fetchAppointment } from "@/store/reducer/appointmentReducer";
+import { RootState } from "@/store/store";
 
 const localizer = momentLocalizer(moment);
 
-const events = [
-  {
-    title: 'Appointment',
-    start: new Date(2024, 3, 15), 
-    end: new Date(2024, 3, 15) 
-  },
-  {
-    title: 'Appointment',
-    start: new Date(2024, 3, 20), 
-    end: new Date(2024, 3, 22) 
-  }
-];
+interface AppointmentDataType {
+  patientName: string;
+  dateTime: string;
+  duration: string;
+  
+}
 
 const CalendarChart = () => {
+  const dispatch = useAppDispatch();
+  const appointment:AppointmentDataType[] = useAppSelector((s: RootState) => s.appointment.appointmentData);
+
+  useEffect(() => {
+    dispatch(fetchAppointment());
+  }, []);
+
+  const events = appointment.map((appointmentItem) => {
+    const durationMinutes = parseInt(appointmentItem.duration);
+    const endDateTime = moment(appointmentItem.dateTime)
+      .add(durationMinutes, "minutes")
+      .toDate();
+
+    return {
+      title: appointmentItem.patientName,
+      start: new Date(appointmentItem.dateTime),
+      end: endDateTime,
+    };
+  });
+  const today = moment().toDate();
+  
+  const CustomToolbar = () => {
+    return null;
+  };
   return (
-    <div style={{ height: '500px' }}>
+    <div style={{ height: "700px" }}>
       <Calendar
         localizer={localizer}
         events={events}
         startAccessor="start"
         endAccessor="end"
-        defaultDate={new Date(2024, 3, 1)} // April 1, 2024
+        defaultView="week"
+        defaultDate={today}
+        components={{
+          toolbar: CustomToolbar,
+        }}
       />
     </div>
   );

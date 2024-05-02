@@ -93,7 +93,7 @@ export default function Appointments(props: { value: string }) {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
-                width: "272px",
+                width: "500px",
                 marginBottom: "10px",
               }}
             >
@@ -105,8 +105,8 @@ export default function Appointments(props: { value: string }) {
               >
                 <Image
                   src={Images.blackDot}
-                  width={6.81}
-                  height={6.81}
+                  width={20.81}
+                  height={20.81}
                   alt="Black Dot"
                   style={{ marginLeft: 15.4 }}
                 />
@@ -124,8 +124,8 @@ export default function Appointments(props: { value: string }) {
               >
                 <Image
                   src={Images.dorpDown}
-                  width={10.39}
-                  height={5.7}
+                  width={18.39}
+                  height={12.7}
                   alt="dorpDown"
                   id="dorpDown"
                 />
