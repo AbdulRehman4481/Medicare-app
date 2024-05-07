@@ -9,7 +9,7 @@ import { signIn } from "next-auth/react";
 import useSignIn from "@/hooks/useSignIn";
 
 export default function SignIn() {
-  const { handleSubmit, handleChange }=useSignIn()
+  const { handleSubmit, isLoading, handleChange } = useSignIn();
 
   return (
     <>
@@ -41,10 +41,19 @@ export default function SignIn() {
               </Link>
             </div>
             <button type="submit" className="finishBtn">
-              Finish
+              {isLoading ? "Loading..." : "Finish"}
             </button>
-            <button onClick={() => signIn("google", { callbackUrl: "/" })} className="googleBtn">
-              <Image src={Images.googleIcon} style={{marginRight:10}}  width={24} height={24} alt="googleIcon" />
+            <button
+              onClick={() => signIn("google", { callbackUrl: "/" })}
+              className="googleBtn"
+            >
+              <Image
+                src={Images.googleIcon}
+                style={{ marginRight: 10 }}
+                width={24}
+                height={24}
+                alt="googleIcon"
+              />
               Google SignIn
             </button>
           </form>

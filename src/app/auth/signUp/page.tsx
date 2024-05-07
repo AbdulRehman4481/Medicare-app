@@ -8,7 +8,7 @@ import Link from "next/link";
 import useSignUp from "@/hooks/useSignUp";
 
 export default function SignUp() {
-  const { handleSubmit, handleChange } = useSignUp();
+    const { handleSubmit, handleChange ,isLoading} = useSignUp();
 
   return (
     <>
@@ -58,7 +58,9 @@ export default function SignUp() {
               I Already Have An Account <u>Sign In</u>{" "}
             </Link>
             <button type="submit" className="finishBtn">
-              Finish
+              {
+                isLoading? "Loading...":"Finish"
+              }
             </button>
           </form>
         </div>

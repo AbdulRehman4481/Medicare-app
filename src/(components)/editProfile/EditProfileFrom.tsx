@@ -4,8 +4,11 @@ import Input from "../input/input";
 import Image from "next/image";
 import Images from "@/constant/Image";
 import useEditProfile from "@/hooks/useEditProfile";
+import { EditProfileFormProps } from "@/constant/Types";
 
-const EditProfileFrom = ({ isOpen, onClose }: any) => {
+
+
+const EditProfileFrom: React.FC<EditProfileFormProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const { handleUpdate, handleChange, state, isLoading } = useEditProfile();

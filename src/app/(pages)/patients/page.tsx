@@ -10,6 +10,7 @@ import {
 } from "@/(components)/statusColor/statusColor";
 import usePatients from "@/hooks/usePatients";
 import DropDown from "@/(components)/dropDown/DropDown";
+import Loader from "@/(components)/loader/Loader";
 
 export default function Patients() {
   const {
@@ -34,6 +35,7 @@ export default function Patients() {
 
   return (
     <div className="patientDiv">
+      
       <div>
         <h1 className="patientHeading">Patient register</h1>
       </div>

@@ -4,7 +4,6 @@ export default function useSchedule() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log("true")
     setIsModalOpen(true);
   };
 

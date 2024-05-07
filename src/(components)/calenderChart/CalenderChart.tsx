@@ -22,7 +22,6 @@ const CalendarChart = () => {
   useEffect(() => {
     dispatch(fetchAppointment());
   }, []);
-
   const events = appointment.map((appointmentItem) => {
     const durationMinutes = parseInt(appointmentItem.duration);
     const endDateTime = moment(appointmentItem.dateTime)

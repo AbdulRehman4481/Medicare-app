@@ -12,11 +12,14 @@ const initialUser: UserData = {
 
 export default function useSignUp() {
   const [userData, setUserData] = useState(initialUser);
+  const [isLoading,setIsLoading] = useState(false)
+
   const handleChange = (e: Change) =>
     setUserData((s) => ({ ...s, [e.target.name]: e.target.value }));
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     try {
+      setIsLoading(true)
       const myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
@@ -36,10 +39,13 @@ export default function useSignUp() {
 
       await fetch("http://localhost:3000/api/register", requestOptions);
       showToast("Account successFully Created","success")
+      setIsLoading(false)
     } catch (error) {
       console.log("error", error);
+    } finally{
+      setIsLoading(false)
     }
   };
 
-  return { handleSubmit, handleChange };
+  return { handleSubmit, isLoading,handleChange };
 }

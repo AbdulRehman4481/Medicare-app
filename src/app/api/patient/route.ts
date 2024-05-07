@@ -4,7 +4,6 @@ import { NextRequest, NextResponse } from "next/server";
 export const POST = async (req: NextRequest) => {
   try {
     const body = await req.json();
-    console.log("bodyRoute", body);
     const today = new Date().getTime().toString();
 
     const response = await prisma.patients.create({
@@ -48,7 +47,6 @@ export const GET = async () => {
 export const DELETE = async (req: NextRequest) => {
   try {
     const body = await req.json();
-    console.log("body", body);
     if (body.id) {
       await prisma.patients.delete({
         where: {

@@ -1,25 +1,16 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
 import { fetchPatient } from "@/store/reducer/patientFetchReducer";
 import { RootState } from "@/store/store";
-import { PatientDataType } from "@/constant/Types";
-
-
-interface AppointmentDataType {
-  consultation: string;
-  dateTime: string;
-}
-
+import { AppointmentDataType, PatientDataType } from "@/constant/Types";
 
 export default function useHome() {
   const patientsData: PatientDataType[] = useAppSelector(
     (state: RootState) => state.patient.patientData
   );
-  const appointmentData: AppointmentDataType[]  = useAppSelector(
+  const appointmentData: AppointmentDataType[] = useAppSelector(
     (state: RootState) => state.appointment.appointmentData
   );
-
-
 
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -32,8 +23,21 @@ export default function useHome() {
     (appointment) => appointment.consultation === "Yes"
   );
   const totalAppointmentsCount = appointmentData?.length;
-  const trueAppointmentsPercentage = ((filteredAppointments?.length / totalAppointmentsCount) * 100).toFixed(0);
-  const falseAppointmentsPercentage = ((filteredAppointmentsNo?.length / totalAppointmentsCount) * 100).toFixed(0);
+  const trueAppointmentsPercentage = (
+    (filteredAppointments?.length / totalAppointmentsCount) *
+    100
+  ).toFixed(0);
+  const falseAppointmentsPercentage = (
+    (filteredAppointmentsNo?.length / totalAppointmentsCount) *
+    100
+  ).toFixed(0);
 
-  return { patientsData,falseAppointmentsPercentage,trueAppointmentsPercentage,appointmentData,filteredAppointmentsNo,filteredAppointments };
+  return {
+    patientsData,
+    falseAppointmentsPercentage,
+    trueAppointmentsPercentage,
+    appointmentData,
+    filteredAppointmentsNo,
+    filteredAppointments,
+  };
 }

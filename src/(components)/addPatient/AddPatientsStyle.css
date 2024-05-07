@@ -1,3 +1,6 @@
+.calendarAbove{
+  display: flex;
+}
 .secondAddDiv {
   display: flex;
   flex-direction: row;
@@ -116,6 +119,7 @@ textarea {
   font-weight: 400;
   border: 1px solid #e0e0e0;
   margin-right: 14px; 
+  color: black;
 }
 .statusDropDown {
   width: 415px;

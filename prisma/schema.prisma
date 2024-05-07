@@ -22,6 +22,12 @@ model user {
   employees   String
 }
 
+model otp {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  otp       String
+  otpExpiry DateTime?
+}
+
 model patients {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   foreName    String

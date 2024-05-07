@@ -1,3 +1,4 @@
+import { showToast } from "@/(components)/toast/Toast";
 import { Change } from "@/constant/Types";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
@@ -19,7 +20,6 @@ export default function useChangePassword() {
 
   const handleChangePassword = async (e: any) => {
     e.preventDefault();
-    console.log(oldPassword, newPassword);
     if (!oldPassword || !newPassword || !confirmPassword) {
       alert("Please fill in all fields.");
       return;
@@ -43,7 +43,7 @@ export default function useChangePassword() {
       if (!response.ok) {
         throw new Error("Failed to change password.");
       }
-      console.log("Password changed successfully.");
+      showToast("Password changed","success")
     } catch (error) {
       console.error("Error changing password:", error);
       alert("Failed to change password. Please try again later.");

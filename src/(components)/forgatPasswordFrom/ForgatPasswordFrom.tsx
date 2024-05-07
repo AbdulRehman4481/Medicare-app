@@ -5,14 +5,27 @@ import useForgatPassword from "@/hooks/useForgatPassword";
 import Link from "next/link";
 
 export default function ForgatPasswordFrom() {
-  const { email, setEmail, sendEmail, getOtp } = useForgatPassword();
+  const {
+    email,
+    setEmail,
+    getOtp,
+    setOtpValue,
+    handleSubmit,
+    isLoading,
+    handleOtpSubmit,
+  } = useForgatPassword();
   return (
     <div>
       <form>
         {getOtp ? (
           <>
             <label htmlFor="">OTP</label>
-            <Input type="email" place="Email" name="opt" />
+            <input
+              type="email"
+              placeholder="Enter your OTP"
+              name="verifyOtp"
+              onChange={(e: any) => setOtpValue(e.target.value)}
+            />
           </>
         ) : (
           <>
@@ -31,9 +44,15 @@ export default function ForgatPasswordFrom() {
             I Do't Have An Account <u>Sign Up</u>{" "}
           </Link>
         </div>
-        <button className="finishBtn" onClick={sendEmail}>
-          Submit
-        </button>
+        {getOtp ? (
+          <button className="finishBtn" onClick={handleOtpSubmit}>
+            {isLoading ? "loading..." : "Verify"}
+          </button>
+        ) : (
+          <button className="finishBtn" onClick={handleSubmit}>
+            {isLoading ? "loading..." : "Submit"}
+          </button>
+        )}
       </form>
     </div>
   );

@@ -22,4 +22,7 @@ export type Change = {
     companyName: string;
     employees: string;
   }
- 
+  export interface EditProfileFormProps {
+    isOpen: boolean;
+    onClose: () => void;
+  }

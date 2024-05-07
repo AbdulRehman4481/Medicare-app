@@ -1,3 +1,5 @@
+"use client";
+
 import { PatientDataType } from "@/constant/Types";
 import { fetchPatient } from "@/store/reducer/patientFetchReducer";
 import { RootState } from "@/store/store";
@@ -5,11 +7,16 @@ import { useAppDispatch, useAppSelector } from "@/store/storeHook";
 import { ApexOptions } from "apexcharts";
 import React, { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
+import Loader from "../loader/Loader";
+import Image from "next/image";
+import Images from "@/constant/Image";
 
 interface Props {}
 
 const TotalChart: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
+  const [loading, setLoading] = useState(true);
+
   const patientsData: PatientDataType[] = useAppSelector(
     (state: RootState) => state.patient.patientData
   );
@@ -18,7 +25,12 @@ const TotalChart: React.FC<Props> = () => {
   const [maleNumber, setMaleNumber] = useState<number>(0);
 
   useEffect(() => {
-    dispatch(fetchPatient());
+    dispatch(fetchPatient())
+      .then(() => setLoading(false))
+      .catch((error) => {
+        console.error("Error fetching appointment data:", error);
+        setLoading(false);
+      });
   }, [dispatch]);
 
   useEffect(() => {
@@ -80,17 +92,45 @@ const TotalChart: React.FC<Props> = () => {
     },
   };
 
+  if (loading) {
+    return (
+      <div
+        style={{
+          width: "fit-content",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <div>
+      <div className="totalFirst">
+              <h1>Total Patients</h1>
+              <Image
+                src={Images.threeDotIcon}
+                width={23.54}
+                height={23.54}
+                alt="threeDotIcon"
+              />
+            </div>
+            <div className="chartDiv">
+              <h1 className="amount">{patientsData?.length}</h1>
       <div id="chart">
         <ReactApexChart
           options={options}
           series={series}
           type="donut"
-          height={119} 
-          width={119} 
+          height={119}
+          width={119}
         />
       </div>
+      </div>
+
     </div>
   );
 };

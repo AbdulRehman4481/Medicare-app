@@ -20,7 +20,7 @@ export function Analytics({ color }: { color: "white" | "blue" }) {
             ? "#828282"
             : "#828282"
         }
-        stroke-width="1.96125"
+        strokeWidth="1.96125"
       />
       <rect
         x="10.5207"
@@ -35,7 +35,7 @@ export function Analytics({ color }: { color: "white" | "blue" }) {
             ? "#828282"
             : "#828282"
         }
-        stroke-width="1.96125"
+        strokeWidth="1.96125"
       />
       <rect
         x="19.4474"
@@ -50,7 +50,7 @@ export function Analytics({ color }: { color: "white" | "blue" }) {
             ? "#828282"
             : "#828282"
         }
-        stroke-width="1.96125"
+        strokeWidth="1.96125"
       />
     </svg>
   );
@@ -105,9 +105,9 @@ export function Calender({ color }: { color: "white" | "blue" }) {
             ? "#828282"
             : "#828282"
         }
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M16 2.00092V6.00092"
@@ -118,9 +118,9 @@ export function Calender({ color }: { color: "white" | "blue" }) {
             ? "#828282"
             : "#828282"
         }
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8 2.00092V6.00092"
@@ -131,9 +131,9 @@ export function Calender({ color }: { color: "white" | "blue" }) {
             ? "#828282"
             : "#828282"
         }
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M3 10.0008H21"
@@ -144,9 +144,9 @@ export function Calender({ color }: { color: "white" | "blue" }) {
             ? "#828282"
             : "#828282"
         }
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -169,9 +169,9 @@ export function Dashboard({ color }: { color: "white" | "blue" }) {
             ? "#828282"
             : "#828282"
         }
-        stroke-width="2.45156"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2.45156"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

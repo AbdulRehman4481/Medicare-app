@@ -15,6 +15,7 @@ const initialData = {
   dob: "",
 };
 export default function AddPatient({ showPatient, editPatientData }: any) {
+  const [loading, setLoading] = useState(false);
   const [patientData, setPatientData] = useState(initialData);
   const [isUpdate, setIsUpdate] = useState(false);
   const handleChange = (e: Change) =>
@@ -28,10 +29,10 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
       setIsUpdate(true);
     }
   }, [editPatientData]);
-  console.log("patientData", patientData);
   const handleAddPatient = async (e: any) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
@@ -48,8 +49,11 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
       await fetch("http://localhost:3000/api/patient", requestOptions);
       showToast("Patient successfully Added", "success");
       setPatientData(initialData);
+      setLoading(false);
     } catch (error) {
       console.log("At handleAddPatient ", error);
+    } finally {
+      setLoading(false);
     }
   };
   const handleDate = (e: Change) => {
@@ -63,23 +67,31 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
   };
 
   const handleUpdate = async () => {
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    try {
+      setLoading(true);
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
 
-    const raw = JSON.stringify({
-      id: editPatientData.id,
-      ...patientData,
-    });
+      const raw = JSON.stringify({
+        id: editPatientData.id,
+        ...patientData,
+      });
 
-    const requestOptions = {
-      method: "PUT",
-      headers: myHeaders,
-      body: raw,
-    };
+      const requestOptions = {
+        method: "PUT",
+        headers: myHeaders,
+        body: raw,
+      };
 
-    await fetch("http://localhost:3000/api/patient", requestOptions);
-    setPatientData(initialData);
-    showToast("Patient successfully updated", "success");
+      await fetch("http://localhost:3000/api/patient", requestOptions);
+      setPatientData(initialData);
+      showToast("Patient successfully updated", "success");
+      setLoading(false);
+    } catch (error) {
+      console.log("error", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -131,7 +143,7 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
                   onChange={handleChange}
                 />
               </div>
-              <div>
+              {/* <div>
                 <input
                   type="text"
                   className="inputz"
@@ -139,7 +151,7 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
                   value={patientData.surName}
                   onChange={handleChange}
                 />
-              </div>
+              </div> */}
               <div>
                 <div className="calendarAbove">
                   <span className="calendar">
@@ -149,10 +161,11 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
                       width={18}
                       alt="calendar"
                     />
-                  </span>
+                    </span>
                   <input
                     type="date"
                     className="calendarInput"
+                    name="dob"
                     value={patientData.dob}
                     onChange={handleDate}
                   />
@@ -191,6 +204,15 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
                   name="note"
                   value={patientData.note}
                 ></textarea>
+              </div>
+              <div>
+              <input
+                  type="number"
+                  className="inputz"
+                  value={patientData.phoneNumber}
+                  name="phoneNumber"
+                  onChange={handleChange}
+                />
               </div>
               <div>
                 <select

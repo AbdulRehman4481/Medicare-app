@@ -24,7 +24,8 @@ export default function Appointments(props: { value: string }) {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  const patientData: AppointmentDataType[] = useAppSelector(
+  
+  const appointmentData: AppointmentDataType[] = useAppSelector(
     (state) => state.appointment.appointmentData
   );
   const dispatch = useAppDispatch();
@@ -40,7 +41,7 @@ export default function Appointments(props: { value: string }) {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
 
-  const todayAppointment = patientData?.filter((appointment) => {
+  const todayAppointment = appointmentData?.filter((appointment) => {
     const appointmentDate = new Date(appointment.dateTime);
     const appointmentTime = appointmentDate.getHours();
     const comparisonTime = parseInt(value, 10);
@@ -74,11 +75,9 @@ export default function Appointments(props: { value: string }) {
     } catch (error) {}
   };
   const handleEdit = async (id: string) => {
-    console.log("id", id);
     const appointment = todayAppointment.find(
       (appointment) => appointment.id === id
     );
-    console.log("appointment", appointment);
     setIsModalOpen(true);
     setEditAppointmentData(appointment ?? null);
   };
@@ -105,8 +104,8 @@ export default function Appointments(props: { value: string }) {
               >
                 <Image
                   src={Images.blackDot}
-                  width={20.81}
-                  height={20.81}
+                  width={10.81}
+                  height={10.81}
                   alt="Black Dot"
                   style={{ marginLeft: 15.4 }}
                 />

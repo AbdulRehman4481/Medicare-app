@@ -35,7 +35,6 @@ export const PUT = async (request: NextRequest) => {
       where: { id },
       data,
     });
-    console.log("Updated user:", appointment);
     return new NextResponse(JSON.stringify({ data: appointment, success: true }), {
       status: 200,
     });
