@@ -1,5 +1,5 @@
 "use client";
-import Images from "@/constant/Image";
+import Images from "../../../constant/Image";
 import Image from "next/image";
 import React from "react";
 import "./ScheduleStyle.css";

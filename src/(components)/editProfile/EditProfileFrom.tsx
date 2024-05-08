@@ -2,9 +2,9 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import "./EditProfileFromStyle.css";
 import Input from "../input/input";
 import Image from "next/image";
-import Images from "@/constant/Image";
+import Images from "../../constant/Image";
 import useEditProfile from "@/hooks/useEditProfile";
-import { EditProfileFormProps } from "@/constant/Types";
+import { EditProfileFormProps } from "../../constant/Types";
 
 
 

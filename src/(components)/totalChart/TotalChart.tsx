@@ -1,6 +1,5 @@
 "use client";
-
-import { PatientDataType } from "@/constant/Types";
+import { PatientDataType } from "../../constant/Types";
 import { fetchPatient } from "@/store/reducer/patientFetchReducer";
 import { RootState } from "@/store/store";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
@@ -9,7 +8,7 @@ import React, { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import Loader from "../loader/Loader";
 import Image from "next/image";
-import Images from "@/constant/Image";
+import Images from "../../constant/Image";
 
 interface Props {}
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./DropDownStyle.css";
 import Image from "next/image";
-import Images from "@/constant/Image";
-import { PatientDataType } from "@/constant/Types";
+import Images from "../../constant/Image";
+import { PatientDataType } from "../../constant/Types";
 import { RootState } from "@/store/store";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
 import { fetchPatient } from "@/store/reducer/patientFetchReducer";

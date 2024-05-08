@@ -2,16 +2,7 @@ import { showToast } from "@/(components)/toast/Toast";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Change, UserData } from "@/constant/Types";
-
-
-const initialUser: UserData = {
-  fullName: "",
-  email: "",
-  password: "",
-  companyName: "",
-  employees: "",
-};
+import { Change, UserData } from "../constant/Types";
 
 export default function useSignIn() {
   const router = useRouter();

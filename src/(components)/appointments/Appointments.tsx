@@ -1,4 +1,4 @@
-import Images from "@/constant/Image";
+import Images from "../../constant/Image";
 import { fetchAppointment } from "@/store/reducer/appointmentReducer";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
 import Image from "next/image";

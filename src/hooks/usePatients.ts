@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
 import { fetchPatient } from "@/store/reducer/patientFetchReducer";
 import { RootState } from "@/store/store";
-import { PatientDataType } from "@/constant/Types";
+import { PatientDataType } from "../constant/Types";
 export default function usePatients() {
   const patientsData: PatientDataType[] = useAppSelector(
     (state: RootState) => state.patient.patientData

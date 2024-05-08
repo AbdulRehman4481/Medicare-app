@@ -1,5 +1,5 @@
 import { showToast } from "@/(components)/toast/Toast";
-import { Change } from "@/constant/Types";
+import { Change } from "../constant/Types";
 import { fetchUser } from "@/store/reducer/userFetchReducer";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
 import { useSession } from "next-auth/react";

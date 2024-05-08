@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./SettingStyle.css";
-import Images from "@/constant/Image";
+import Images from "../../../constant/Image";
 import EditProfileFrom from "@/(components)/editProfile/EditProfileFrom";
 
 export default function Settings() {

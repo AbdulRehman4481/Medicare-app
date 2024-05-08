@@ -10,7 +10,7 @@ import {
   Patients,
   Settings,
   Task,
-} from "@/constant/SvgImages";
+} from "../../constant/SvgImages";
 export default function SideBar() {
   const [activeLink, setActiveLink] = useState("");
 

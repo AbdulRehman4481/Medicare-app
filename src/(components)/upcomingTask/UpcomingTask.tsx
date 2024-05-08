@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./UpComingTaskStyle.css";
 import Image from "next/image";
-import Images from "@/constant/Image";
+import Images from "../../constant/Image";
 import AppointmentModal from "../appointmentModal/appointmentModal";
 import Appointments from "../appointments/Appointments";
 

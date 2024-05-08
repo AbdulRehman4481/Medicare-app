@@ -1,5 +1,5 @@
 import { showToast } from "@/(components)/toast/Toast";
-import { Change, UserData } from "@/constant/Types";
+import { Change, UserData } from "../constant/Types";
 import { useState } from "react";
 
 const initialUser: UserData = {

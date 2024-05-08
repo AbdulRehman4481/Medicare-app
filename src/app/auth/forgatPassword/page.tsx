@@ -1,6 +1,6 @@
 import Image from "next/image";
 import "./ForgatPasswordStyle.css";
-import Images from "@/constant/Image";
+import Images from "../../../constant/Image";
 
 import ForgatPasswordFrom from "@/(components)/forgatPasswordFrom/ForgatPasswordFrom";
 export default function ForgatPassword() {

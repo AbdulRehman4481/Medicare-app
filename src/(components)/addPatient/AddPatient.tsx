@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./AddPatientsStyle.css";
 import Image from "next/image";
-import Images from "@/constant/Image";
+import Images from "../../constant/Image";
 import { showToast } from "../toast/Toast";
-import { Change } from "@/constant/Types";
+import { Change } from "../../constant/Types";
 const initialData = {
   foreName: "",
   surName: "",

@@ -1,10 +1,10 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import "./Modal.css";
 import Image from "next/image";
-import Images from "@/constant/Image";
+import Images from "../../constant/Image";
 import { showToast } from "../toast/Toast";
 import dayjs from "dayjs";
-import { Change } from "@/constant/Types";
+import { Change } from "../../constant/Types";
 
 const initialData = {
   patientName: "",

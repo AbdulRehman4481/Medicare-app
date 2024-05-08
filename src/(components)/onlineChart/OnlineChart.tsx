@@ -7,8 +7,8 @@ import { RootState } from "@/store/store";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
 import Loader from "../loader/Loader";
 import Image from "next/image";
-import Images from "@/constant/Image";
-import useHome from "@/hooks/useHome";
+import Images from "../../constant/Image";
+import useHome from "../../hooks/useHome";
 
 export interface AppointmentDataType {
   consultation: string;

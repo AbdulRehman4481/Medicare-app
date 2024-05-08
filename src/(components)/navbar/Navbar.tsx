@@ -2,7 +2,7 @@
 import React from "react";
 import "./NavbarStyle.css";
 import Image from "next/image";
-import Images from "@/constant/Image";
+import Images from "../../constant/Image";
 import dayjs from "dayjs";
 import { signOut } from "next-auth/react";
 export default function Navbar() {

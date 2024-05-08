@@ -3,9 +3,8 @@ import Input from "../../../(components)/input/input";
 import "./SignInStyle.css";
 import Link from "next/link";
 import Image from "next/image";
-import Images from "@/constant/Image";
+import Images from "../../../constant/Image";
 import { signIn } from "next-auth/react";
-
 import useSignIn from "@/hooks/useSignIn";
 
 export default function SignIn() {

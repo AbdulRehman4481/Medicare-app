@@ -3,7 +3,7 @@ import Image from "next/image";
 import "./RestPasswordStyle.css";
 import Link from "next/link";
 import Input from "@/(components)/input/input";
-import Images from "@/constant/Image";
+import Images from "../../../constant/Image";
 import useChangePassword from "@/hooks/useChangePassword";
 
 export default function ChangePassword() {

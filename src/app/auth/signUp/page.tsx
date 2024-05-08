@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Input from "../../../(components)/input/input";
 import "./SignUpStyle.css";
-import Images from "@/constant/Image";
+import Images from "../../../constant/Image";
 import Link from "next/link";
 import useSignUp from "@/hooks/useSignUp";
 

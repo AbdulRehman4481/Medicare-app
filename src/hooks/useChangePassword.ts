@@ -1,5 +1,5 @@
 import { showToast } from "@/(components)/toast/Toast";
-import { Change } from "@/constant/Types";
+import { Change } from "../constant/Types";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 
