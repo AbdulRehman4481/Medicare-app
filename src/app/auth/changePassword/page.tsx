@@ -38,7 +38,7 @@ export default function ChangePassword() {
             />
             <div className="linkDiv">
               <Link href={"signUp"} className="signUpLink">
-                I Do't Have An Account <u>Sign Up</u>{" "}
+                I Do&apos;t Have An Account <u>Sign Up</u>{" "}
               </Link>
               <Link href={"forgatPassword"} className="signInLink">
                 Forgat Password

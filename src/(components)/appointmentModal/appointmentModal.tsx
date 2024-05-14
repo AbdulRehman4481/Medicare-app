@@ -17,9 +17,10 @@ const initialData = {
 };
 
 const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
-  if (!isOpen) return null;
+  // Moved hooks to the top level
   const [updateAppointment, setUpdateAppointment] = useState(false);
   const [appointmentData, setAppointmentData] = useState(initialData);
+
   useEffect(() => {
     if (editAppointmentData) {
       setAppointmentData(editAppointmentData);
@@ -27,23 +28,29 @@ const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
     }
   }, [editAppointmentData]);
 
+  if (!isOpen) return null;
+
   const handleChange = (e: Change) =>
     setAppointmentData((s) => ({ ...s, [e.target.name]: e.target.value }));
 
   const handleConfirmation = (status: string) => {
     setAppointmentData((prevData) => ({ ...prevData, status }));
   };
+
   const handleDuration = (duration: string) => {
     setAppointmentData((prevData) => ({ ...prevData, duration }));
   };
+
   const handleType = (type: string) => {
     setAppointmentData((prevData) => ({ ...prevData, type }));
   };
+
   const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
     const dateTimeString = e.target.value;
     const dateTime = new Date(dateTimeString);
     setAppointmentData((prevData) => ({ ...prevData, dateTime }));
   };
+
   const handleConsultation = (consultation: string) => {
     setAppointmentData((prevData) => ({ ...prevData, consultation }));
   };
@@ -52,39 +59,34 @@ const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
     try {
       const myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-
       const raw = JSON.stringify({
         ...appointmentData,
       });
-
       const requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: raw,
       };
-
       await fetch("http://localhost:3000/api/appointment", requestOptions);
       showToast("success", "Successfully created");
     } catch (error) {
       console.log("error", error);
     }
   };
+
   const handleEditAppointment = async () => {
     try {
       const myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-
       const raw = JSON.stringify({
         id: editAppointmentData.id,
         ...appointmentData,
       });
-
       const requestOptions = {
         method: "PUT",
         headers: myHeaders,
         body: raw,
       };
-
       await fetch(`http://localhost:3000/api/appointment`, requestOptions);
       showToast("success", "Successfully Updated");
     } catch (error) {
@@ -205,7 +207,7 @@ const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
                 }`}
                 onClick={() => handleDuration("10")}
               >
-                10'
+                10&apos;
               </button>
               <button
                 className={`timeBtns ${
@@ -213,7 +215,7 @@ const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
                 }`}
                 onClick={() => handleDuration("30")}
               >
-                30'
+                30&apos;
               </button>
               <button
                 className={`timeBtns ${
@@ -221,7 +223,7 @@ const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
                 }`}
                 onClick={() => handleDuration("45")}
               >
-                45'
+                45&apos;
               </button>
               <button
                 className={`timeBtns ${
@@ -229,7 +231,7 @@ const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
                 }`}
                 onClick={() => handleDuration("60")}
               >
-                60'
+                60&apos;
               </button>
               <button
                 className={`timeBtns ${
@@ -237,7 +239,7 @@ const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
                 }`}
                 onClick={() => handleDuration("90")}
               >
-                90'
+                90&apos;
               </button>
               <button
                 className={`timeBtns ${
@@ -245,7 +247,7 @@ const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
                 }`}
                 onClick={() => handleDuration("120")}
               >
-                120'
+                120&apos;
               </button>
             </div>
             <div>

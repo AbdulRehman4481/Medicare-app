@@ -7,14 +7,13 @@ export default function useUpdatePassword() {
   const [otp, setOtp] = useState({ email: "", otp: "" });
   useEffect(() => {
     const otpValue = localStorage.getItem("otpData");
-    console.log("🚀  useEffect  otpValue:", otpValue);
     if (otpValue !== null) {
       const parsedOtp = JSON.parse(otpValue);
       if (parsedOtp) {
         setOtp(parsedOtp);
       }
     }
-  }, []);
+  }, [otp]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();

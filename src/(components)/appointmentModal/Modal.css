@@ -15,8 +15,10 @@
 
 .modal-content {
   background-color: white;
+  height: 100%;
   border-radius: 5px;
   margin-top: 182;
+  overflow:scroll;
 }
 
 .close-btn {
@@ -46,13 +48,13 @@
   cursor: pointer;
 }
 .modal-content h1 {
-  font-family: Mukta;
+  font-family: "Mukta";
   font-size: 18px;
   font-weight: 400;
   color: #2f80ed;
 }
 .modal-content h2 {
-  font-family: Mukta;
+  font-family: "Mukta";
   font-size: 16px;
   font-weight: 400;
 }

@@ -8,7 +8,7 @@ export default function ForgatPassword() {
     <>
       <div className="forgatDiv">
         <div className="fromDiv">
-          <h1 className="mainHeading">Forgat Password</h1>
+          <h1 className="Heading">Forgat Password</h1>
           <ForgatPasswordFrom />
         </div>
         <div className="secondDiv">

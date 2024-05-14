@@ -19,14 +19,6 @@ export default function DropDown({
   setShow: any;
 }) {
   const [visible, setVisible] = useState(false);
-  const patientsData: PatientDataType[] = useAppSelector(
-    (state: RootState) => state.patient.patientData
-  );
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(fetchPatient());
-  }, []);
-
   const toggleDropDown = () => {
     setVisible(!visible);
   };

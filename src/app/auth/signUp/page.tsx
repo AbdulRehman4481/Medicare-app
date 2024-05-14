@@ -14,7 +14,6 @@ export default function SignUp() {
     <>
       <div className="signUpDiv">
         <div className="fromDiv">
-          <h1 className="mainHeading">Welcome to Medicare</h1>
           <p className="para">Tell us about your company</p>
           <form onSubmit={handleSubmit}>
             <label htmlFor="">Name</label>

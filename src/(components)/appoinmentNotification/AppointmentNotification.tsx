@@ -18,7 +18,7 @@ export default function ToastNotification() {
 const dispatch = useAppDispatch()
   useEffect(() => {
     dispatch(fetchAppointment());
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     const checkAppointmentTime = () => {
       const now = new Date() as any;

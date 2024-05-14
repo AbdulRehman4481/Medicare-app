@@ -69,7 +69,7 @@
 .secondDiv {
   background-color: #0000ac;
   height: 100%;
-  width: 925px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

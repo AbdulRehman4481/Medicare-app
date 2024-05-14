@@ -13,8 +13,8 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: "100%";
-  /* max-width: 1014px; */
+  /* width: "100%"; */
+  width: 1014px;
 }
 .verticalLine {
   margin-top: 0;

@@ -14,8 +14,8 @@ export default function SignIn() {
     <>
       <div className="signInDiv">
         <div className="fromDiv">
-          <h1 className="mainHeading">Welcome to Medicare</h1>
-          <p className="para">Tell us about your company</p>
+          <h1 className="Heading">Welcome to Medicare</h1>
+          {/* <p className="para">Tell us about your company</p> */}
           <form onSubmit={handleSubmit}>
             <label htmlFor="">Email</label>
             <Input
@@ -31,12 +31,12 @@ export default function SignIn() {
               name="password"
               onChange={handleChange}
             />
-            <div className="linkDiv">
+            <div className="linkDivs">
               <Link href={"signUp"} className="signUpLink">
-                I Do't Have An Account <u>Sign Up</u>{" "}
+                I Do&apos;t Have An Account <b>Sign Up</b>{" "}
               </Link>
               <Link href={"forgatPassword"} className="signInLink">
-                Forgat Password
+                Forgat Password ?
               </Link>
             </div>
             <button type="submit" className="finishBtn">

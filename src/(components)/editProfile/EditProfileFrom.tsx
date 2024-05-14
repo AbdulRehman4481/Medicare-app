@@ -9,9 +9,9 @@ import { EditProfileFormProps } from "../../constant/Types";
 
 
 const EditProfileFrom: React.FC<EditProfileFormProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
+  
   const { handleUpdate, handleChange, state, isLoading } = useEditProfile();
+  if (!isOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>

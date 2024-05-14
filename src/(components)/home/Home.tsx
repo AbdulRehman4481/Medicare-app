@@ -1,11 +1,14 @@
+import "../../app/(pages)/page.css";
+import OfflineChart from "@/(components)/offlineChart/OfflineChart";
+import TotalChart from "@/(components)/totalChart/TotalChart";
+import OnlineChart from "@/(components)/onlineChart/OnlineChart";
+import UpcomingTask from "@/(components)/upcomingTask/UpcomingTask";
+import ToastNotification from "@/(components)/appoinmentNotification/AppointmentNotification";
 
-import dynamic from "next/dynamic";
-const HomeComponent = dynamic(() => import('../../(components)/home/Home'), { ssr: false })
 export default function Home() {
   return (
     <>
-    <HomeComponent />
-      {/* <div className="mainDiv">
+      <div className="mainDiv">
         <div className="locationDiv">
           <span className="location">Dashboard &gt; summary </span>
         </div>
@@ -26,7 +29,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ToastNotification /> */}
+      <ToastNotification />
     </>
   );
 }

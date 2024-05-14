@@ -31,7 +31,7 @@ export default function Appointments(props: { value: string }) {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchAppointment());
-  }, []);
+  }, [dispatch]);
   const today = new Date();
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
     null

@@ -11,7 +11,7 @@ export default function usePatients() {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchPatient());
-  }, []);
+  }, [dispatch]);
 
   const toggleAddPatient = () => {
     setShowAddPatient(!showAddPatient);

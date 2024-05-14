@@ -25,7 +25,7 @@ export default function useForgatPassword() {
   const [email, setEmail] = useState("");
   const [otpValue, setOtpValue] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const [verifyOtp, setVerifyOtp] = useState("");
+  const [verifyOtp, setVerifyOtp] = useState({otp:""});
   const [getOtp, setGetOtp] = useState(false);
   const otp = Math.floor(100000 + Math.random() * 900000);
   const handleSubmit = async (event: any) => {
@@ -74,7 +74,7 @@ export default function useForgatPassword() {
     try {
       setIsLoading(true);
 
-      if (!verifyOtp || verifyOtp == "") {
+      if (!verifyOtp) {
         showToast("OTP Expired","error")
         console.log("OTP Expired");
         return;

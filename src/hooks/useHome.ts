@@ -15,7 +15,7 @@ export default function useHome() {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchPatient());
-  }, []);
+  }, [dispatch]);
   const filteredAppointmentsNo = appointmentData?.filter(
     (appointment) => appointment.consultation === "No"
   );
