@@ -1,0 +1,55 @@
+.clarityIcon {
+  border: 1px solid #e0e0e0;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 7px 14px 7px 14px;
+}
+.secondSettingsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 27px;
+}
+.mainDiv {
+  padding: 14px 28px;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+.secondSettingsDiv {
+  background-color: white;
+  padding: 18px 28px;
+}
+h1 {
+  font-family: "Mukta";
+  font-size: 22px;
+  font-weight: 500;
+}
+a {
+  font-family: Mukta;
+  font-size: 22px;
+  font-weight: 500;
+}
+h2 {
+  font-family: Mukta;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.editProfile {
+  display: flex;
+  align-items: center;
+}
+
+.editProfile button {
+  background-color: transparent;
+  border: none;
+  font-weight: "600";
+  margin-right: 20px;
+  color: blue;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.secondSettingsDiv h1{
+cursor: pointer;
+}

@@ -1,0 +1,134 @@
+.calendarAbove{
+  display: flex;
+}
+.secondAddDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 19px 29px;
+  background-color: #ffff;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.cancelBtn {
+  color: #0000ac;
+  background-color: white;
+  border: 1px solid #0000ac;
+  width: 77px;
+  height: 41px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.saveBtn {
+  background-color: #0000ac;
+  border: 1px solid #0000ac;
+  color: white;
+  width: 77px;
+  height: 41px;
+  border-radius: 5px;
+}
+.assign {
+  font-family: "Mukta";
+  font-size: 18px;
+  font-weight: 700;
+  width: 152px;
+  height: 44px;
+  padding: 7 11.000000953674316px 7 11.000000953674316px;
+  border-radius: 4.999999523162842;
+  border: 0.9999999403953552 solid black;
+}
+.genderBtn {
+  width: 72px;
+  height: 44px;
+  padding: 0 9.000227928161621px 0 9.999768257141113px;
+  border-radius: 4.999999523162842px;
+  background-color: #e0e0e0;
+  font-family: Mukta;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  margin-right: 14px;
+}
+.fromModal {
+  margin-top: 43px;
+  width: 783px;
+  background-color: #ffff;
+  overflow: scroll;
+}
+.form {
+  display: flex;
+  padding: 54px 41px;
+}
+.aboveForm {
+  display: flex;
+  justify-content: center;
+}
+.fromLabel {
+  margin-right: 100px;
+}
+.fromLabel h1 {
+  font-family: Mukta;
+  font-size: 18px;
+  font-weight: 400;
+  color: #4f4f4f;
+  margin-top: 52px;
+}
+.inputzz div {
+  margin-top: 31px;
+}
+.inputz {
+  width: 415px;
+  height: 44px;
+  border-radius: 4.999999523162842px;
+  border: 0.9999999403953552px solid #e0e0e0;
+  font-size: 20px;
+}
+.calendar {
+  width: 45px;
+  height: 44px;
+  padding: 10.0008544921875px 10.000228881835938px 9.9991455078125px
+    10.999767303466797px;
+  border-radius: 4.999999523162842px;
+  border: 0.9999999403953552px solid #e0e0e0;
+  margin-right: 14px;
+}
+.calendarInput {
+  width: 356px !important;
+  height: 44px;
+  font-size: 20px;
+  border-radius: 4.999999523162842px;
+  border: 0.9999999403953552px solid #e0e0e0;
+}
+textarea {
+  width: 415px;
+  height: 103px;
+  border-radius: 4.999999523162842px;
+  border: 0.9999999403953552 solid #e0e0e0;
+  font-size: 20px;
+}
+.para {
+  font-family: Mukta;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.selected{
+  background-color: white;
+  font-family: "Mukta";
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #e0e0e0;
+  margin-right: 14px; 
+  color: black;
+}
+.statusDropDown {
+  width: 415px;
+  height: 44px;
+  border-radius: 4.999999523162842px;
+  border: 0.9999999403953552px solid #e0e0e0;
+  font-size: 20px;
+  outline: none;
+  font-family: "Mukta";
+  font-size: 16px;
+  font-weight: 400;
+}

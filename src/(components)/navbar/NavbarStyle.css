@@ -1,0 +1,185 @@
+#navFirst {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.nav {
+  background-color: white;
+  height: 94px;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#ulDiv {
+  display: flex;
+  flex-direction: row;
+}
+.checkBtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+#searchDiv {
+  flex: 1;
+  width: 580px;
+  border: 1px solid #e0e0e0;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5.88px;
+  margin: 26px;
+  transition: width 0.5s ease;
+  
+}
+#search {
+  background-color: white;
+  color: black;
+  width: 540px;
+  border: 0;
+  font-size: 18.69px;
+  outline: none;
+  padding-left: 15.69px;
+}
+#search::placeholder {
+  font-size: 15.69px;
+}
+#searchIcon {
+  margin-right: 10px;
+}
+#navSecond {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  border-right: 1px solid #e0e0e0;
+  width: 229px;
+}
+#name {
+  font-family: "Mukta";
+  font-size: 15.69px;
+  font-weight: 400;
+  margin-bottom: 2px;
+  color: #000;
+}
+#doctor {
+  color: #000;
+  font-family: "Mukta";
+  font-size: 15.69px;
+  font-weight: 700;
+}
+#date {
+  color: #000;
+  font-family: "Mukta";
+  font-size: 15.69px;
+  font-weight: 400;
+}
+#dateDiv {
+  border: 1px solid #e0e0e0;
+  padding: 6.89px 14.56px 7.34px 13.53px;
+  margin: 30px 0 38px 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 137px;
+}
+
+#mainHeading {
+  color: #0000ac;
+  font-weight: 400;
+  font-size: 37.26px;
+  line-height: 41.93px;
+  padding-left: 9px;
+  font-family: "Mukta";
+}
+#userInfo {
+  margin-top: 30px;
+  margin-left: 56.8px;
+  text-align: end;
+}
+#navIcons {
+  margin-top: 39px;
+}
+#notifyIcon {
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+@media (max-width: 858px) {
+  .checkBtn {
+    display: block;
+  }
+  #searchDiv {
+    width: 100% !important;
+    margin: 0px 10px 0 10px;
+  }
+  #search {
+    width: 95%;
+  }
+  #ulDiv {
+    position: fixed;
+    width: 100%;
+    height: "fit-content";
+    background-color: white;
+    margin-top: 80px;
+    padding: 20px;
+    top: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 10px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  #liDiv {
+    display: block;
+  }
+  #userInfo {
+    text-align: center;
+  }
+
+  #check:checked ~ #ulDiv {
+    top: 0;
+  }
+}
+@media (max-width: 1393px) {
+  #searchDiv {
+    width: 400px;
+  }
+  #userInfo {
+    margin-left: 10px;
+  }
+  #notifyIcon {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1107px) {
+  #searchDiv {
+    width: 300px;
+  }
+}
+@media (max-width: 997px) {
+  .nav {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+

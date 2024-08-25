@@ -1,0 +1,53 @@
+.patientDiv {
+  background-color: #f9f9f9;
+  padding: 15px 23px;
+}
+.patientHeading {
+  font-family: "Mukta";
+  font-size: 18px;
+  font-weight: 400;
+}
+.totalPatients {
+  font-family: Mukta;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.iconDiv {
+  border: 1px solid #e0e0e0;
+  width: fit-content;
+  padding: 8px;
+  margin-right: 10px;
+}
+.iconsDiv {
+  display: flex;
+}
+.secondDiv {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 28px;
+  background-color: #ffff;
+}
+.scheduleHeading {
+  font-family: Mukta;
+  font-size: 22px;
+  font-weight: 500;
+}
+.scheduleDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 19px 29px;
+}
+.scheduleMain {
+  background-color: #f9f9f9;
+  height: 100vh;
+  padding: 15px 29px;
+}
+.mainHeading {
+  font-family: Mukta;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 27px;
+}

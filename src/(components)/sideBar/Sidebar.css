@@ -1,0 +1,66 @@
+.sidebar {
+  width: 245px;
+}
+.menu {
+  font-family: "Mukta";
+  font-weight: 400;
+  font-size: 12.75px;
+}
+.linkDiv.active {
+  color: #0000ac;
+}
+.linkDiv {
+  font-family: "Mukta";
+  font-weight: 400;
+  font-size: 15.69px;
+  color: #828282;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 21px;
+  padding: 10px 0px 10px 0px;
+  cursor: pointer;
+}
+.linkDiv span{
+  margin-left: 10px;
+
+}
+.sidebar h1 {
+  font-family: "Mukta";
+  font-weight: 400;
+  font-size: 15.45px;
+  color: #828282;
+  margin: 30px 0px 0px 21px;
+}
+.sidebar hr {
+  margin: 35px 38.9px 35px 38.9px;
+}
+.sidebarDiv {
+  display: flex;
+  align-items: center;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebarDiv::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2%;
+  height: 0%;
+  background: #0000ac;
+  z-index: -1;
+  transition: 0.8s;
+}
+.sidebarDiv:hover::before {
+  height: 100%;
+}
+.sidebarDiv::before {
+  top: 0;
+  border-radius: 0 25px 25px 0;
+}
+
+.linkDiv img {
+  margin-right: 10px;
+}
