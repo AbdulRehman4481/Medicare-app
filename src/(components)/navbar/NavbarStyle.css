@@ -48,7 +48,8 @@
   
 }
 #search {
-  margin-top: 20px;
+  background-color: white;
+  color: black;
   width: 540px;
   border: 0;
   font-size: 18.69px;
@@ -74,13 +75,16 @@
   font-size: 15.69px;
   font-weight: 400;
   margin-bottom: 2px;
+  color: #000;
 }
 #doctor {
+  color: #000;
   font-family: "Mukta";
   font-size: 15.69px;
   font-weight: 700;
 }
 #date {
+  color: #000;
   font-family: "Mukta";
   font-size: 15.69px;
   font-weight: 400;
@@ -114,6 +118,7 @@
 }
 #notifyIcon {
   margin-left: 32px;
+  cursor: pointer;
 }
 
 @media (max-width: 858px) {

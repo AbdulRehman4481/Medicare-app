@@ -168,6 +168,7 @@ const OnlineChart: React.FC<{}> = () => {
 };
 
 export default OnlineChart;
+<<<<<<< HEAD
 
 // import React, { useEffect, useState } from "react";
 // import { ApexOptions } from "apexcharts";
@@ -338,3 +339,5 @@ export default OnlineChart;
 // };
 
 // export default OnlineChart;
+=======
+>>>>>>> origin/master

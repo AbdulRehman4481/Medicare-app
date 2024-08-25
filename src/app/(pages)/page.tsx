@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
     <HomeComponent />
+<<<<<<< HEAD
       {/* <div className="mainDiv">
         <div className="locationDiv">
           <span className="location">Dashboard &gt; summary </span>
@@ -27,6 +28,8 @@ export default function Home() {
         </div>
       </div>
       <ToastNotification /> */}
+=======
+>>>>>>> origin/master
     </>
   );
 }

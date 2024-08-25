@@ -14,6 +14,10 @@ export default function SignUp() {
     <>
       <div className="signUpDiv">
         <div className="fromDiv">
+<<<<<<< HEAD
+=======
+        <h1 className="Heading">Welcome to Medicare</h1>
+>>>>>>> origin/master
           <p className="para">Tell us about your company</p>
           <form onSubmit={handleSubmit}>
             <label htmlFor="">Name</label>
@@ -63,6 +67,7 @@ export default function SignUp() {
             </button>
           </form>
         </div>
+<<<<<<< HEAD
         <div className="secondDiv">
           <h1 className="secondHeading"> ALL IN ONE DASHBOARD</h1>
           <Image
@@ -76,6 +81,8 @@ export default function SignUp() {
           </p>
           <button className="learnBtn">Learn More</button>
         </div>
+=======
+>>>>>>> origin/master
       </div>
     </>
   );

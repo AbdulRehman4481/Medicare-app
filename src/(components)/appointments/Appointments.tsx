@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Images from "../../constant/Image";
 import { fetchAppointment } from "@/store/reducer/appointmentReducer";
 import { useAppDispatch, useAppSelector } from "@/store/storeHook";
@@ -6,6 +7,16 @@ import React, { useEffect, useState } from "react";
 import "./AppoinemntStyle.css";
 import { showToast } from "../toast/Toast";
 import AppointmentModal from "../appointmentModal/appointmentModal";
+=======
+import { fetchAppointment } from "@/store/reducer/appointmentReducer";
+import { useAppDispatch, useAppSelector } from "@/store/storeHook";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import Images from "../../constant/Image";
+import AppointmentModal from "../appointmentModal/appointmentModal";
+import { showToast } from "../toast/Toast";
+import "./AppoinemntStyle.css";
+>>>>>>> origin/master
 
 interface AppointmentDataType {
   patientName: string;
@@ -24,15 +35,27 @@ export default function Appointments(props: { value: string }) {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/master
   const appointmentData: AppointmentDataType[] = useAppSelector(
     (state) => state.appointment.appointmentData
   );
   const dispatch = useAppDispatch();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
   useEffect(() => {
     dispatch(fetchAppointment());
   }, [dispatch]);
   const today = new Date();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
     null
   );
@@ -92,7 +115,11 @@ export default function Appointments(props: { value: string }) {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
+<<<<<<< HEAD
                 width: "500px",
+=======
+                width: 500,
+>>>>>>> origin/master
                 marginBottom: "10px",
               }}
             >

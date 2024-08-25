@@ -143,15 +143,6 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
                   onChange={handleChange}
                 />
               </div>
-              {/* <div>
-                <input
-                  type="text"
-                  className="inputz"
-                  name="surName"
-                  value={patientData.surName}
-                  onChange={handleChange}
-                />
-              </div> */}
               <div>
                 <div className="calendarAbove">
                   <span className="calendar">
@@ -234,3 +225,4 @@ export default function AddPatient({ showPatient, editPatientData }: any) {
     </div>
   );
 }
+

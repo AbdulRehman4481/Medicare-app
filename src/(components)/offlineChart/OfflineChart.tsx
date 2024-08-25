@@ -167,6 +167,7 @@ const OfflineChart: React.FC<{}> = () => {
 };
 
 export default OfflineChart;
+<<<<<<< HEAD
 
 // "use client";
 // import React, { useEffect, useState } from "react";
@@ -337,3 +338,5 @@ export default OfflineChart;
 // };
 
 // export default OfflineChart;
+=======
+>>>>>>> origin/master

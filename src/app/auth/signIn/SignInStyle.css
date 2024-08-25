@@ -35,6 +35,10 @@
 }
 .signInDiv {
   display: flex;
+<<<<<<< HEAD
+=======
+  justify-content: center;
+>>>>>>> origin/master
   height: 100vh;
 }
 .Heading {
@@ -74,6 +78,7 @@
   margin-top: 66px;
   margin-bottom: 81px;
 }
+<<<<<<< HEAD
 .learnBtn {
   font-family: "Inter";
   font-size: 12px;
@@ -94,6 +99,9 @@
   justify-content: center;
   align-items: center;
 }
+=======
+
+>>>>>>> origin/master
 .fromDiv {
   display: flex;
   flex-direction: column;
@@ -107,13 +115,23 @@
   font-size: 16px;
   font-weight: 500;
 }
+<<<<<<< HEAD
 .linkDivs{
+=======
+.linkDivs {
+>>>>>>> origin/master
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
+<<<<<<< HEAD
 .linkDivs a:hover{
 color: #0000ac;
 }
+=======
+.linkDivs a:hover {
+  color: #0000ac;
+}
+>>>>>>> origin/master

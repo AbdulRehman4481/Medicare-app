@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* Modal.css */
+=======
+>>>>>>> origin/master
 
 .modal-overlay {
   position: fixed;
@@ -15,9 +18,14 @@
 
 .modal-content {
   background-color: white;
+<<<<<<< HEAD
   height: 100%;
   border-radius: 5px;
   margin-top: 182;
+=======
+  height: 100vh;
+  border-radius: 5px;
+>>>>>>> origin/master
   overflow:scroll;
 }
 
@@ -59,12 +67,20 @@
   font-weight: 400;
 }
 .modal-content h3 {
+<<<<<<< HEAD
   font-family: Mukta;
+=======
+  font-family: "Mukta";
+>>>>>>> origin/master
   font-size: 16px;
   font-weight: 700;
 }
 .modal-content h4 {
+<<<<<<< HEAD
   font-family: Mukta;
+=======
+  font-family: "Mukta";
+>>>>>>> origin/master
   font-size: 13px;
   font-weight: 400;
   color: #2f80ed;
@@ -81,7 +97,10 @@
 }
 .innerDivLocation {
   text-align: center;
+<<<<<<< HEAD
   margin-right: 80px;
+=======
+>>>>>>> origin/master
 }
 .innerDivClock {
   text-align: center;

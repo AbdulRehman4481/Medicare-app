@@ -56,6 +56,7 @@ export default function SignIn() {
               Google SignIn
             </button>
           </form>
+<<<<<<< HEAD
         </div>
         <div className="secondDiv">
           <h1 className="secondHeading"> ALL IN ONE DASHBOARD</h1>
@@ -72,6 +73,9 @@ export default function SignIn() {
           </p>
           <button className="learnBtn">Learn More</button>
         </div>
+=======
+        </div>  
+>>>>>>> origin/master
       </div>
     </>
   );

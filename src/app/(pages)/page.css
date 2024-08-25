@@ -1,5 +1,11 @@
 .mainDiv {
+<<<<<<< HEAD
   background: #fafafa;
+=======
+  background: #f9f9f9;
+  padding: 10px;
+  height: 100vh;
+>>>>>>> origin/master
 }
 .chartMain {
   display: flex;
