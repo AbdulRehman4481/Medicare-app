@@ -56,26 +56,7 @@ export default function SignIn() {
               Google SignIn
             </button>
           </form>
-<<<<<<< HEAD
-        </div>
-        <div className="secondDiv">
-          <h1 className="secondHeading"> ALL IN ONE DASHBOARD</h1>
-          <Image
-            src={Images.loginImage}
-            height={475.73}
-            width={669}
-            loading="lazy"
-            style={{ width: "auto", height: "auto" }}
-            alt="loginImage"
-          />
-          <p className="para2">
-            Keep track of all patient information in this section.
-          </p>
-          <button className="learnBtn">Learn More</button>
-        </div>
-=======
         </div>  
->>>>>>> origin/master
       </div>
     </>
   );

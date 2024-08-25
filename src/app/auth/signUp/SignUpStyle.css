@@ -16,10 +16,7 @@
 }
 .signUpDiv {
   display: flex;
-<<<<<<< HEAD
-=======
   justify-content: center;
->>>>>>> origin/master
   height: 100vh;
 }
 .mainHeading {
@@ -33,12 +30,6 @@
   font-family: "Mukta";
   font-size: 22px;
   font-weight: 500;
-<<<<<<< HEAD
-  line-height: 37px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-=======
->>>>>>> origin/master
   margin-bottom: 32px;
 }
 .secondHeading {
@@ -73,29 +64,12 @@
   border: 1px solid white;
 }
 
-<<<<<<< HEAD
-.secondDiv {
-  background-color: #0000ac;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-=======
->>>>>>> origin/master
 .fromDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-  margin-left: 46px;
-  width: 569px;
-=======
   width: 500px;
->>>>>>> origin/master
 }
 .signInLink {
   font-family: "Mukta";

@@ -91,14 +91,6 @@ a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-=======
->>>>>>> origin/master
 
 
 .sidebar {
@@ -115,11 +107,6 @@ a {
 
 .content {
   margin-left: 250px;
-<<<<<<< HEAD
-  padding: 1px 16px;
-  margin-top: 94px;
-=======
   margin-top: 94px;
   background-color: #f9f9f9;
->>>>>>> origin/master
 } 

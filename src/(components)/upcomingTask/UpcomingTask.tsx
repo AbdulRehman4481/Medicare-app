@@ -1,15 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import "./UpComingTaskStyle.css";
-import Image from "next/image";
-import Images from "../../constant/Image";
-import AppointmentModal from "../appointmentModal/appointmentModal";
-import Appointments from "../appointments/Appointments";
-
-export default function UpcomingTask() {
-  const time = ["8:00", "9:00", "10:00", "11:00"];
-=======
 import Image from "next/image";
 import { useState } from "react";
 import Images from "../../constant/Image";
@@ -19,7 +8,6 @@ import "./UpComingTaskStyle.css";
 
 export default function UpcomingTask() {
   const time = ["08:00", "09:00", "10:00", "11:00"];
->>>>>>> origin/master
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -34,18 +22,7 @@ export default function UpcomingTask() {
     <>
       <div>
         <div
-<<<<<<< HEAD
-          className="taskDiv"
-          style={{
-            display: "flex",
-            marginTop: 16.5,
-            marginRight: 19.2,
-            marginLeft: 19.2,
-          }}
-        >
-=======
           className="taskDiv">
->>>>>>> origin/master
           <div>
             <span className="firstHeading">Upcoming schedule</span>
           </div>
@@ -66,18 +43,6 @@ export default function UpcomingTask() {
           </div>
         </div>
         <div
-<<<<<<< HEAD
-          style={{
-            marginTop: "16px",
-          }}
-        >
-          {time?.map((value, index) => (
-            <div
-              style={{ display: "flex", marginLeft: 16, marginRight: 16 }}
-              key={index}
-            >
-              <div style={{ width: 50 }}>
-=======
         >
           {time?.map((value, index) => (
             <div
@@ -85,7 +50,6 @@ export default function UpcomingTask() {
               key={index}
             >
               <div style={{marginRight:10}}>
->>>>>>> origin/master
                 <h1 className="time">{value}</h1>
               </div>
               <div

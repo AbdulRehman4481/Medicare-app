@@ -17,10 +17,6 @@ const initialData = {
 };
 
 const AppointmentModal = ({ isOpen, onClose, editAppointmentData }: any) => {
-<<<<<<< HEAD
-  // Moved hooks to the top level
-=======
->>>>>>> origin/master
   const [updateAppointment, setUpdateAppointment] = useState(false);
   const [appointmentData, setAppointmentData] = useState(initialData);
 

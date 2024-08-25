@@ -13,11 +13,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-<<<<<<< HEAD
-  /* width: "100%"; */
-=======
   padding: 20px;
->>>>>>> origin/master
   width: 1014px;
 }
 .verticalLine {
